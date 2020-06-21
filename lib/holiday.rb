@@ -24,20 +24,25 @@ def add_supply_to_winter_holidays(holiday_hash, supply)
   
  holiday_hash[:winter].each do |holiday, decorations|
    decorations << supply
-  end
+  
 end
 
 
 def add_supply_to_memorial_day(holiday_hash, supply)
  
- holiday_hash[:spring][:memorial_day].push(supply)
-end
+  holiday_hash[:spring][:memorial_day].push(supply)
+end 
 
-def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
-  # code here
-  # remember ot return the updated hash
+  add_supply_to_memorial_day(holiday_supplies, "Balloons")
 
-end
+
+def add_new_holiday_with_supplies(holiday_hash, season, holiday_name,
+  supply_array)
+  
+  holiday_hash[season][holiday_name] >> supply_array
+  end
+  return supply_array
+end 
 
 def all_winter_holiday_supplies(holiday_hash)
   # return an array of all of the supplies that are used in the winter season
